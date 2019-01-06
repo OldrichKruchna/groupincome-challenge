@@ -1,7 +1,12 @@
 <template>
 	<div>
 		<button type="button" name="button" v-on:click="openModal()">Open the modal</button>
-		<Modal>Tuc</Modal>
+		<Modal>
+			<div class="layout">
+				<Menu />
+				<Content />
+			</div>
+		</Modal>
 	</div>
 </template>
 
@@ -9,6 +14,8 @@
 import eventBus from './eventBus';
 
 import Modal from './Modal.vue';
+import Menu from './Menu.vue';
+import Content from './Content';
 
 export default {
 	data() {
@@ -17,7 +24,9 @@ export default {
 		};
 	},
 	components: {
-		Modal
+		Modal,
+		Content,
+		Menu
 	},
 	methods: {
 		openModal() {
@@ -53,5 +62,11 @@ li {
 
 a {
   // color: #42b983;
+}
+
+.layout {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 </style>
