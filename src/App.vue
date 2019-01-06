@@ -37,6 +37,13 @@ export default {
 </script>
 
 <style lang="scss">
+
+* {
+  padding: 0;
+  margin: 0;
+	box-sizing: border-box;
+}
+
 #app {
   // font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -51,8 +58,7 @@ h1, h2 {
 }
 
 ul {
-  // list-style-type: none;
-  // padding: 0;
+  list-style-type: none;
 }
 
 li {
@@ -64,9 +70,12 @@ a {
   // color: #42b983;
 }
 
+// TODO part of the modal?
 .layout {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+	height: 100%;
 }
 </style>
