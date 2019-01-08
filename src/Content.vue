@@ -34,5 +34,9 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
+	// TODO count that there is some display: flex in the parent
+	.content {
+		width: 65%;
+	}
 </style>

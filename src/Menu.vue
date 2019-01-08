@@ -34,7 +34,7 @@ export default {
 	&__wrapper {
 		display: flex;
 		justify-content: flex-end;
-		width: 400px;
+		width: 35%;
 		height: 100%;
 		padding: 16px 8px;
 	}

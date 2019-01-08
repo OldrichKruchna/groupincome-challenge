@@ -3,6 +3,7 @@
 		<button type="button" name="button" v-on:click="openModal()">Open the modal</button>
 		<Modal>
 			<div class="layout">
+				<!-- TODO maybe to remove the Menu component, put it here, then set a width for the Content -->
 				<Menu />
 				<Content />
 			</div>
@@ -78,4 +79,11 @@ a {
 	width: 100%;
 	height: 100%;
 }
+
+* {
+	// background-color: rgba(0,0,0,0.1) !important;
+	// background: green;
+}
+
+
 </style>
