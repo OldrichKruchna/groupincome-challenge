@@ -1,7 +1,8 @@
 <template >
 	<div class="modal" v-if="open">
 		<slot></slot>
-		<div class="close-button" v-on:click="close()">x</div>
+		<router-link class="close-button" :to="{ path: '/' }">x</router-link>
+		<!-- <div class="close-button" v-on:click="close()">x</div> -->
 	</div>
 </template>
 
@@ -11,7 +12,7 @@ import eventBus from './eventBus';
 export default {
 	data() {
 		return {
-			open: false
+			open: true
 		}
 	},
 	mounted() {

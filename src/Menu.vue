@@ -11,8 +11,12 @@
 			<div class="menu__list">
 				<span class="headline">App settings</span>
 				<ul>
-					<li>Notifications</li>
-					<li class="active">Appearance</li>
+					<router-link tag="li" :to='{ path: "notifications" }'>
+      			<a>Notifications</a>
+    			</router-link>
+					<router-link tag="li" :to='{ path: "appearance" }'>
+						<a>Appearance</a>
+					</router-link>
 				</ul>
 				<hr>
 				<ul>

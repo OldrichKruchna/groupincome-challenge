@@ -1,12 +1,37 @@
 <template>
 	<div>
-		<router-link :to="{ path: '/settings/appearance' }">Open appearance settings</router-link>
-		<router-view></router-view>
+		<Modal>
+			<div class="layout">
+				<!-- TODO maybe to remove the Menu component, put it here, then set a width for the Content -->
+				<Menu />
+				<router-view></router-view>
+			</div>
+		</Modal>
 	</div>
 </template>
 
 <script>
-export default {};
+import eventBus from './eventBus';
+
+import Modal from './Modal.vue';
+import Menu from './Menu.vue';
+
+export default {
+	data() {
+		return {
+			isModalOpen: false
+		};
+	},
+	components: {
+		Modal,
+		Menu
+	},
+	methods: {
+		openModal() {
+			eventBus.$emit('openModal');
+		}
+	}
+};
 </script>
 
 <style lang="scss">
