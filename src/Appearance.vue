@@ -3,6 +3,15 @@
 	<div class="content">
 		<h2>Appearance</h2>
 		<h3>Theme</h3>
+		<div class="theme-list">
+			<div v-for="theme in themes" :key="theme.name">
+				<img :src="theme.iconUrl" :alt="theme.name + ' theme preview icon'">
+				<input type="radio" :id="'theme-' + theme.name" :value="theme.name" v-model="activeTheme">
+				<label for="'theme-' + theme.name">{{ theme.name }}</label>
+				<br>
+			</div>
+		</div>
+
 		<ul class"theme-list">
 			<li>
 				<span>Blue</span>
@@ -30,7 +39,34 @@
 </template>
 
 <script>
-export default {}
+const themes = [{
+		name: 'default',
+		iconUrl: require('./assets/default-theme-preview.svg')
+	}, {
+		name: 'green',
+		iconUrl: require('./assets/green-theme-preview.svg')
+	}, {
+		name: 'orange',
+		iconUrl: require('./assets/orange-theme-preview.svg')
+	}, {
+		name: 'silver',
+		iconUrl: require('./assets/silver-theme-preview.svg')
+	}, {
+		name: 'dark',
+		iconUrl: require('./assets/dark-theme-preview.svg')
+	}
+];
+
+export default {
+	data() {
+		return {
+			// Maybe move the themes somewhere else, global configuration?
+			themes,
+			// TODO add default one, move this to the App
+			activeTheme: themes[0],
+		}
+	},
+}
 </script>
 
 <style lang="scss" scoped>
