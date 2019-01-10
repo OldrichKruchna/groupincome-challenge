@@ -4,31 +4,16 @@
 		<h2>Appearance</h2>
 		<h3>Theme</h3>
 		<div class="theme-list">
-			<div v-for="theme in themes" :key="theme.name">
-				<img :src="theme.iconUrl" :alt="theme.name + ' theme preview icon'">
-				<input type="radio" :id="'theme-' + theme.name" :value="theme.name" v-model="activeTheme">
-				<label for="'theme-' + theme.name">{{ theme.name }}</label>
+			<div class="theme-list__item" v-for="theme in themes" :key="theme.name">
+				<img class="theme-list__image" :src="theme.iconUrl" :alt="theme.name + ' theme preview icon'" v-on:click="selectTheme(theme.name)">
+				<label v-bind:for="'theme-' + theme.name">
+					{{ theme.name }}
+				</label>
+				<input type="radio" v-bind:id="'theme-' + theme.name" :value="theme.name" v-model="activeTheme" v-on:change="selectTheme(theme.name)">
 				<br>
 			</div>
 		</div>
 
-		<ul class"theme-list">
-			<li>
-				<span>Blue</span>
-			</li>
-			<li>
-				<span>Green</span>
-			</li>
-			<li>
-				<span>Orange</span>
-			</li>
-			<li>
-				<span>Silver</span>
-			</li>
-			<li>
-				<span>Dark</span>
-			</li>
-		</ul>
 		<h3>Text settings</h3>
 
 		<!-- TODO slider -->
@@ -39,6 +24,9 @@
 </template>
 
 <script>
+import eventBus from './eventBus';
+
+// TODO move this into configuration
 const themes = [{
 		name: 'default',
 		iconUrl: require('./assets/default-theme-preview.svg')
@@ -60,12 +48,18 @@ const themes = [{
 export default {
 	data() {
 		return {
-			// Maybe move the themes somewhere else, global configuration?
+			// TODO Maybe move the themes somewhere else, global configuration?
 			themes,
 			// TODO add default one, move this to the App
-			activeTheme: themes[0],
+			activeTheme: window.activeTheme,
 		}
 	},
+	methods: {
+		selectTheme(themeName) {
+			this.activeTheme = themeName;
+			eventBus.$emit('updateTheme', themeName);
+		}
+	}
 }
 </script>
 
@@ -73,5 +67,20 @@ export default {
 	// TODO count that there is some display: flex in the parent
 	.content {
 		width: 65%;
+	}
+
+	.theme-list {
+		display: flex;
+		flex-wrap: wrap;
+		// TODO how much is that?
+		max-width: 400px;
+
+		&__item {
+			margin: 10px;
+		}
+
+		&__image {
+			display: block;
+		}
 	}
 </style>

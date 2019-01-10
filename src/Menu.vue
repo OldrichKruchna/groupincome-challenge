@@ -12,10 +12,10 @@
 				<span class="headline">App settings</span>
 				<ul>
 					<router-link tag="li" :to='{ path: "notifications" }'>
-      			<a>Notifications</a>
+						Notifications
     			</router-link>
 					<router-link tag="li" :to='{ path: "appearance" }'>
-						<a>Appearance</a>
+						Appearance
 					</router-link>
 				</ul>
 				<hr>
@@ -59,11 +59,7 @@ li {
 	align-items: center;
 	padding: 0 8px;
 	border-radius: 4px;
-
-	&.active {
-		background-color: #5DC8F0;
-		color: white;
-	}
+	cursor: pointer;
 }
 
 hr {
