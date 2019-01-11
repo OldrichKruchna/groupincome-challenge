@@ -11,7 +11,6 @@ import eventBus from './eventBus';
 export default {
 	data() {
 		return {
-			// TODO Load from the local storage
 			activeTheme: window.activeTheme
 		};
 	},
