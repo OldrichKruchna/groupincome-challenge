@@ -24,6 +24,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import './themes.scss';
+
 * {
   padding: 0;
   margin: 0;
@@ -53,70 +55,5 @@ p {
 
 ul {
   list-style-type: none;
-}
-
-// themes' configuration
-.theme--blue {
-	li.active {
-		color: #fff;
-    background-color: #79c6ec;
-	}
-
-	.menu {
-		background-color: #e3f3fb;
-	}
-}
-
-.theme--green {
-	li.active {
-		color: #fff;
-    background-color: #99ba3c;
-	}
-
-	.menu {
-		background-color: #f5f8e9;
-	}
-}
-
-.theme--orange {
-	li.active {
-		color: #fff;
-    background-color: #ea9737;
-	}
-
-	.menu {
-		background-color: #fcf4e7;
-	}
-}
-
-.theme--silver {
-	li.active {
-		color: #fff;
-    background-color: #ea9737;
-	}
-
-	.menu {
-		background-color: #f5f5f5;
-	}
-}
-
-.theme--dark {
-	color: #fff;
-
-	li.active {
-    background-color: #79c6ec;
-	}
-
-	.menu {
-		background-color: #363636;
-	}
-
-	.content {
-		background-color: #4e4e4e;
-	}
-
-	.modal .close-button {
-		background-color: #565656;
-	}
 }
 </style>

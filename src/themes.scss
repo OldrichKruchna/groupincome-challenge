@@ -1,0 +1,96 @@
+// themes' variables
+
+// blue theme
+$blue-highlight: #79c6ec;
+$blue-base: #e3f3fb;
+
+// green theme
+$green-highlight: #99ba3c;
+$green-base: #f5f8e9;
+
+// orange theme
+$orange-highlight: #ea9737;
+$orange-base: #fcf4e7;
+
+// silver theme
+$silver-highlight: $orange-highlight;
+$silver-base: #f5f5f5;
+
+// dark theme
+$dark-highlight: #79c6ec;
+$dark-base: #363636;
+$dark-content: #4e4e4e;
+$dark-icon: #565656;
+
+// export variables for javascript
+:export {
+  blueHighlight: $blue-highlight;
+	greenHighlight: $green-highlight;
+	orangeHighlight: $orange-highlight;
+	silverHighlight: $silver-highlight;
+	darkHighlight: $dark-highlight;
+}
+
+.theme--blue {
+	li.active {
+		color: #fff;
+    background-color: $blue-highlight;
+	}
+
+	.menu {
+		background-color: $blue-base;
+	}
+}
+
+.theme--green {
+	li.active {
+		color: #fff;
+    background-color: $green-highlight;
+	}
+
+	.menu {
+		background-color: $green-base;
+	}
+}
+
+.theme--orange {
+	li.active {
+		color: #fff;
+    background-color: $orange-highlight;
+	}
+
+	.menu {
+		background-color: $orange-base;
+	}
+}
+
+.theme--silver {
+	li.active {
+		color: #fff;
+    background-color: $silver-highlight;
+	}
+
+	.menu {
+		background-color: $silver-base;
+	}
+}
+
+.theme--dark {
+	color: #fff;
+
+	li.active {
+    background-color: $dark-highlight;
+	}
+
+	.menu {
+		background-color: $dark-base;
+	}
+
+	.content {
+		background-color: $dark-content;
+	}
+
+	.modal .close-button {
+		background-color: $dark-icon;
+	}
+}
