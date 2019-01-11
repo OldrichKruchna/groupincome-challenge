@@ -43,8 +43,10 @@ export default {
   // margin-top: 60px;
 }
 
-h1, h2 {
-  // font-weight: normal;
+h1, h2, h3 {
+	// TODO the old version
+	// margin: 24px 12px;
+	margin: 8px 12px 24px;
 }
 
 ul {
@@ -81,7 +83,7 @@ a {
 }
 
 // TODO move this into sass independed file
-.theme--default {
+.theme--blue {
 	li.active {
 		color: #fff;
     background-color: #79c6ec;

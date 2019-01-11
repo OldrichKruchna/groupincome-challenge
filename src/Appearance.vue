@@ -6,10 +6,10 @@
 		<div class="theme-list">
 			<div class="theme-list__item" v-for="theme in themes" :key="theme.name">
 				<img class="theme-list__image" :src="theme.iconUrl" :alt="theme.name + ' theme preview icon'" v-on:click="selectTheme(theme.name)">
+				<input type="radio" v-bind:id="'theme-' + theme.name" :value="theme.name" v-model="activeTheme" v-on:change="selectTheme(theme.name)">
 				<label v-bind:for="'theme-' + theme.name">
 					{{ theme.name }}
 				</label>
-				<input type="radio" v-bind:id="'theme-' + theme.name" :value="theme.name" v-model="activeTheme" v-on:change="selectTheme(theme.name)">
 				<br>
 			</div>
 		</div>
@@ -28,8 +28,8 @@ import eventBus from './eventBus';
 
 // TODO move this into configuration
 const themes = [{
-		name: 'default',
-		iconUrl: require('./assets/default-theme-preview.svg')
+		name: 'blue',
+		iconUrl: require('./assets/blue-theme-preview.svg')
 	}, {
 		name: 'green',
 		iconUrl: require('./assets/green-theme-preview.svg')
@@ -67,16 +67,29 @@ export default {
 	// TODO count that there is some display: flex in the parent
 	.content {
 		width: 65%;
+		// TODO the old version
+		// padding: 0 12px;
+		padding: 16px 12px;
 	}
 
 	.theme-list {
 		display: flex;
 		flex-wrap: wrap;
 		// TODO how much is that?
-		max-width: 400px;
+		max-width: 420px;
 
 		&__item {
-			margin: 10px;
+			margin: 0 12px 12px;
+
+			input {
+				margin: 20px 2px;
+			}
+
+			label {
+				text-transform: capitalize;
+				font-size: 14px;
+				margin-left: 3px;
+			}
 		}
 
 		&__image {
