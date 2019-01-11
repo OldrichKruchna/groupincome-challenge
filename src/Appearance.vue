@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="appearance">
 		<h2>Appearance</h2>
 		<h3>Theme</h3>
 		<div class="theme-list">
@@ -60,6 +60,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.appearance {
+	max-width: 500px;
+}
+
 .theme-list {
 	display: flex;
 	flex-wrap: wrap;

@@ -41,6 +41,16 @@ h1, h2, h3 {
 	letter-spacing: -0.4px;
 }
 
+h4 {
+	margin: 8px 12px 0px;
+	font-size: 14px;
+}
+
+p {
+	margin: 8px 12px 24px;
+	font-size: 14px;
+}
+
 ul {
   list-style-type: none;
 }
