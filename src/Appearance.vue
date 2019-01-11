@@ -1,24 +1,27 @@
 <template>
-	<div class="appearance">
-		<h2>Appearance</h2>
-		<h3>Theme</h3>
-		<div class="theme-list">
-			<div class="theme-list__item" v-for="theme in themes" :key="theme.name">
-				<img class="theme-list__image" :src="theme.iconUrl" :alt="theme.name + ' theme preview icon'" v-on:click="selectTheme(theme.name)">
-				<input type="radio" v-bind:id="'theme-' + theme.name" :value="theme.name" v-model="activeTheme" v-on:change="selectTheme(theme.name)">
-				<label v-bind:for="'theme-' + theme.name">
-					{{ theme.name }}
-				</label>
-				<br>
+	<div>
+		<div class="appearance">
+			<h2>Appearance</h2>
+			<h3>Theme</h3>
+			<div class="theme-list">
+				<div class="theme-list__item" v-for="theme in themes" :key="theme.name">
+					<img class="theme-list__image" :src="theme.iconUrl" :alt="theme.name + ' theme preview icon'" v-on:click="selectTheme(theme.name)">
+					<input type="radio" v-bind:id="'theme-' + theme.name" :value="theme.name" v-model="activeTheme" v-on:change="selectTheme(theme.name)">
+					<label v-bind:for="'theme-' + theme.name">
+						{{ theme.name }}
+					</label>
+					<br>
+				</div>
 			</div>
-		</div>
 
-		<h3>Text settings</h3>
+			<h3>Text settings</h3>
 
 		<!-- TODO slider -->
 
-		<h4>Text size preview</h4>
-		<p>Group Income (n) is an efficient, fair, decentralized Basic Income system for you and your friends.</p>
+
+			<h4>Text size preview</h4>
+			<p>Group Income (n) is an efficient, fair, decentralized Basic Income system for you and your friends.</p>
+		</div>
 	</div>
 </template>
 
