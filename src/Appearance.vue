@@ -46,10 +46,8 @@ const themes = [{
 export default {
 	data() {
 		return {
-			// TODO Maybe move the themes somewhere else, global configuration?
 			themes,
-			// TODO add default one, move this to the App
-			activeTheme: window.activeTheme,
+			activeTheme: window.localStorage.getItem('groupincome-theme') || 'blue',
 		}
 	},
 	methods: {

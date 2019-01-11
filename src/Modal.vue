@@ -15,13 +15,12 @@ import eventBus from './eventBus';
 export default {
 	data() {
 		return {
+			// TODO add loading from configuration
 			iconColor: '#363636'
-		}
+		};
 	},
 	mounted() {
 		eventBus.$on('updateTheme', (themeName) => {
-			// TODO is it nice?
-			// TODO use configuration
 			if (themeName === 'dark') {
 				this.iconColor = '#fff';
 			} else {
