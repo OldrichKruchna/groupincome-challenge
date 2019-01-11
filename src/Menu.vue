@@ -1,11 +1,15 @@
 <template>
-	<div class="menu__wrapper">
-		<div class="menu">
+	<div class="menu">
+		<div>
 			<div class="menu__list">
 				<span class="headline">User settings</span>
 				<ul>
-					<li>My account</li>
-					<li>Privacy & Safety</li>
+					<router-link tag="li" :to='{ path: "my-account" }'>
+						My account
+					</router-link>
+					<router-link tag="li" :to='{ path: "privacy-and-safety" }'>
+						Privacy & Safety
+					</router-link>
 				</ul>
 			</div>
 			<div class="menu__list">
@@ -20,8 +24,12 @@
 				</ul>
 				<hr>
 				<ul>
-					<li>Changelog</li>
-					<li>Log Out</li>
+					<router-link tag="li" :to='{ path: "changelog" }'>
+						Changelog
+					</router-link>
+					<router-link tag="li" :to='{ path: "logout" }'>
+						Log Out
+					</router-link>
 				</ul>
 			</div>
 		</div>
@@ -35,13 +43,9 @@ export default {
 
 <style lang="scss" scoped>
 .menu {
-	&__wrapper {
-		display: flex;
-		justify-content: flex-end;
-		width: 35%;
-		height: 100%;
-		padding: 16px 8px;
-	}
+	display: flex;
+	justify-content: flex-end;
+	padding: 16px 8px;
 }
 
 span {

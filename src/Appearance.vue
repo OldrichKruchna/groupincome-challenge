@@ -1,6 +1,5 @@
 <template>
-	<!-- TODO shouldn't be content dynamic? -->
-	<div class="content">
+	<div>
 		<h2>Appearance</h2>
 		<h3>Theme</h3>
 		<div class="theme-list">
@@ -64,14 +63,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	// TODO count that there is some display: flex in the parent
-	.content {
-		width: 65%;
-		// TODO the old version
-		// padding: 0 12px;
-		padding: 16px 12px;
-	}
-
 	.theme-list {
 		display: flex;
 		flex-wrap: wrap;

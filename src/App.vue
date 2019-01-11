@@ -35,12 +35,8 @@ export default {
 }
 
 #app {
-  // font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  // text-align: center;
-  // color: #2c3e50;
-  // margin-top: 60px;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3 {
@@ -54,15 +50,6 @@ ul {
   list-style-type: none;
 }
 
-li {
-  // display: inline-block;
-  // margin: 0 10px;
-}
-
-a {
-  // color: #42b983;
-}
-
 // TODO part of the modal?
 .layout {
 	display: flex;
@@ -70,11 +57,6 @@ a {
 	// align-items: center;
 	width: 100%;
 	height: 100%;
-}
-
-* {
-	// background-color: rgba(0,0,0,0.1) !important;
-	// background: green;
 }
 
 .theme-default {
@@ -90,7 +72,7 @@ a {
     background-color: #79c6ec;
 	}
 
-	.menu__wrapper {
+	.menu {
 		background-color: #e3f3fb;
 	}
 }
@@ -101,7 +83,7 @@ a {
     background-color: #99ba3c;
 	}
 
-	.menu__wrapper {
+	.menu {
 		background-color: #f5f8e9;
 	}
 }
@@ -112,7 +94,7 @@ a {
     background-color: #ea9737;
 	}
 
-	.menu__wrapper {
+	.menu {
 		background-color: #fcf4e7;
 	}
 }
@@ -123,7 +105,7 @@ a {
     background-color: #ea9737;
 	}
 
-	.menu__wrapper {
+	.menu {
 		background-color: #f5f5f5;
 	}
 }
@@ -135,7 +117,7 @@ a {
     background-color: #79c6ec;
 	}
 
-	.menu__wrapper {
+	.menu {
 		background-color: #363636;
 	}
 
