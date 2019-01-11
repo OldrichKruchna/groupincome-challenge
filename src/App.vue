@@ -11,36 +11,32 @@ import eventBus from './eventBus';
 export default {
 	data() {
 		return {
-			activeTheme: window.activeTheme
+			activeTheme: window.localStorage.getItem('groupincome-theme') || 'blue'
 		};
 	},
 	mounted() {
 		eventBus.$on('updateTheme', (themeName) => {
-			// TODO shouldn't be load it just locally
-			// TODO is it nice?
-			window.activeTheme = themeName;
 			this.activeTheme = themeName;
+			window.localStorage.setItem('groupincome-theme', themeName);
 		});
 	}
 };
 </script>
 
 <style lang="scss">
-
 * {
   padding: 0;
   margin: 0;
 	box-sizing: border-box;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 #app {
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3 {
-	// TODO the old version
-	// margin: 24px 12px;
 	margin: 8px 12px 24px;
 	letter-spacing: -0.4px;
 }
@@ -49,22 +45,7 @@ ul {
   list-style-type: none;
 }
 
-// TODO part of the modal?
-.layout {
-	display: flex;
-	justify-content: center;
-	// align-items: center;
-	width: 100%;
-	height: 100%;
-}
-
-.theme-default {
-	a {
-		color: pink;
-	}
-}
-
-// TODO move this into sass independed file
+// themes' configuration
 .theme--blue {
 	li.active {
 		color: #fff;
@@ -128,7 +109,4 @@ ul {
 		background-color: #565656;
 	}
 }
-
-
-
 </style>

@@ -25,7 +25,6 @@
 <script>
 import eventBus from './eventBus';
 
-// TODO move this into configuration
 const themes = [{
 		name: 'blue',
 		iconUrl: require('./assets/blue-theme-preview.svg')
@@ -63,28 +62,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	.theme-list {
-		display: flex;
-		flex-wrap: wrap;
-		// TODO how much is that?
-		max-width: 420px;
+.theme-list {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 420px;
 
-		&__item {
-			margin: 0 12px 12px;
+	&__item {
+		margin: 0 12px 12px;
 
-			input {
-				margin: 20px 2px;
-			}
-
-			label {
-				text-transform: capitalize;
-				font-size: 14px;
-				margin-left: 3px;
-			}
+		input {
+			margin: 20px 2px;
 		}
 
-		&__image {
-			display: block;
+		label {
+			text-transform: capitalize;
+			font-size: 14px;
+			margin-left: 3px;
 		}
 	}
+
+	&__image {
+		display: block;
+	}
+}
 </style>
