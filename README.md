@@ -23,4 +23,10 @@ npm run dev
 
 # build for production with minification
 npm run build
+
+# display built result
+cd dist
+npx http-server
+
+# open browser at localhost:8080
 ```

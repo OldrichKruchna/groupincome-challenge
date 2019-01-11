@@ -17,22 +17,19 @@
 			<h3>Text settings</h3>
 
 			<div class="slider">
-				<vue-slider :min="1" :max="4" v-model="value" :tooltip="false"
+				<vue-slider :min="1" :max="4" v-model="fontSize" :tooltip="false"
 					:slider-style="{ 'backgroundColor': activeTheme.highlightColor }"
 					:process-style="{ 'backgroundColor': activeTheme.highlightColor }"
 					:piecewiseLabel="true"
 					:data="['Aa', 'Aa', 'Aa', 'Aa']">
-				<template slot="label" slot-scope="{ label }">
-				  <span :class="['slider__label']">
-						<div class="ticker"></div>
-				    {{ label }}
-				  </span>
-				</template>
-			</vue-slider>
-		</div>
-
-			<!-- <VueSlideBar v-model="value"/> -->
-			<!-- TODO slider -->
+					<template slot="label" slot-scope="{ label }">
+					  <span :class="['slider__label']">
+							<div class="ticker"></div>
+					    {{ label }}
+					  </span>
+					</template>
+				</vue-slider>
+			</div>
 
 			<h4>Text size preview</h4>
 			<p>Group Income (n) is an efficient, fair, decentralized Basic Income system for you and your friends.</p>
@@ -81,7 +78,7 @@ export default {
 		return {
 			themes,
 			activeTheme,
-			value: 1
+			fontSize: 1
 		}
 	},
 	methods: {
