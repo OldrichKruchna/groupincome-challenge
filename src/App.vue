@@ -47,6 +47,7 @@ h1, h2, h3 {
 	// TODO the old version
 	// margin: 24px 12px;
 	margin: 8px 12px 24px;
+	letter-spacing: -0.4px;
 }
 
 ul {
