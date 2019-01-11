@@ -53,19 +53,28 @@ span {
 }
 
 li {
-	height: 32px;
-	width: 160px;
 	display: flex;
 	align-items: center;
+	width: 174px;
+	height: 34px;
 	padding: 0 8px;
+	// TODO rem?
+	font-size: 14px;
 	border-radius: 4px;
 	cursor: pointer;
+
+	&.active {
+		font-weight: bold;
+	}
 }
 
 hr {
 	display: block;
 	margin: 16px auto;
-	width: calc(100% - 16px);
+	width: calc(100% - 14px);
+	border: 0;
+	height: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .headline {
@@ -73,7 +82,7 @@ hr {
 	align-items: center;
 	padding: 0 8px;
 	text-transform: uppercase;
-	// TODO color fix
-	color: grey;
+	color: #7a7a7a;
+	font-size: 14px;
 }
 </style>
