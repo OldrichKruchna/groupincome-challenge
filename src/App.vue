@@ -142,6 +142,10 @@ a {
 	.content {
 		background-color: #4e4e4e;
 	}
+
+	.modal .close-button {
+		background-color: #565656;
+	}
 }
 
 
