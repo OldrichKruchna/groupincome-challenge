@@ -1,5 +1,5 @@
 <template>
-	<div :class="['theme--' + activeTheme]">
+	<div :class="['theme--' + activeThemeName]">
 		<router-link :to="{ path: '/settings/appearance' }">Open appearance settings</router-link>
 		<router-view></router-view>
 	</div>
@@ -11,12 +11,12 @@ import eventBus from './eventBus';
 export default {
 	data() {
 		return {
-			activeTheme: window.localStorage.getItem('groupincome-theme') || 'blue'
+			activeThemeName: window.localStorage.getItem('groupincome-theme') || 'blue'
 		};
 	},
 	mounted() {
 		eventBus.$on('updateTheme', (themeName) => {
-			this.activeTheme = themeName;
+			this.activeThemeName = themeName;
 			window.localStorage.setItem('groupincome-theme', themeName);
 		});
 	}
